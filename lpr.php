@@ -105,7 +105,7 @@ if( ! function_exists("exec")){
 }
 
 
-if( empty(run('/usr/local/bin/alpr --version')) ){
+if( empty(run('alpr --version')) ){
 	$mypath = run('echo $PATH');
 	error_log("Error: alpr command not found, is it installed and in your PATH? Is LD_CONFIG set? PATH:".$mypath,0);
 	$response['error']= 'Error: alpr command not found, is it installed and in your PATH? PATH:'.$mypath;
