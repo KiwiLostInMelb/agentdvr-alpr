@@ -52,4 +52,6 @@ I have implemented some logging to help diagnose errors so look in web server er
 E.g. /var/log/php-fpm/www-errorlog.log and /var/log/httpd/error_log
 Note that these may be different if you are on a different distribution or different web server.
 
+You can also check the AgentDVR logs for some errors. E.g. http://[AgentDVR Server IP]:[Agent DVR Port]/logs.html
+
 Good luck!
