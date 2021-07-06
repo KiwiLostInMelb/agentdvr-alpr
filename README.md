@@ -43,6 +43,12 @@ Similarly, the [LD_LIBRARY_PATH] variable is used for locating all the libraries
 10. Setup AgentDVR to point to your new alpr - in the server config->intelligence set the plate recogniser to
 -> http://localhost:8080/lpr.php
 
+11. Update your AgentDVR config so it requests plate recognition more regularly. I.e. config->edit devices->[CAMERA]->lpr->Minimum Interval->2
+- Your minimum interval should be under the time taken for alpr to return a result.  1 second should be fine if you are using alpr with hardware acceleration. 2 seconds is pretty safe for cpu enabled alpr.
+
+
 I have implemented some logging to help diagnose errors so look in web server error log and the php-fpm error log for clues.
 E.g. /var/log/php-fpm/www-errorlog.log and /var/log/httpd/error_log
 Note that these may be different if you are on a different distribution or different web server.
+
+Good luck!
