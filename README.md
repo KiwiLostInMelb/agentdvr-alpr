@@ -16,6 +16,7 @@ Steps:
 4. Place lpr.php in a path on your web server or the root web directory - e.g. /var/www/html
 
 5. Change the line used to run alpr in the lpr.php file to match your region.  I am in Australia so I use --country auwide.
+- TODO use region from AgentDVR config
 
 6. Make the required changes to your php-fpm cofig file to allow the web server user to find alpr.  For me this was located at: /etc/php-fpm.d/www.conf
 -> env[PATH] = /usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/usr/lib64/ccache
